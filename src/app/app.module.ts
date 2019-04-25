@@ -13,6 +13,7 @@ import { CommanService } from './common/services/services';
 import { Configuration } from './common/constants/constants';
 import { HeaderSectionComponent } from './header-section/header-section.component';
 import { FooterSectionComponent } from './footer-section/footer-section.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { FooterSectionComponent } from './footer-section/footer-section.componen
     AppComponent,
     HomeComponent,
     HeaderSectionComponent,
-    FooterSectionComponent
+    FooterSectionComponent,
+    CarouselComponent
   ],
   providers: [
     AuthGuard,

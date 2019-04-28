@@ -1,5 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
-
+import { CommanService } from '../common/services/services'; 
 /*import * as Prism from 'prismjs';*/
 
 @Component({
@@ -9,10 +9,43 @@ import { Component, AfterViewInit } from '@angular/core';
 })
 export class HomeComponent implements AfterViewInit {
 
+  constructor(private commonService: CommanService) { 
+    
+  }
+    /*
+   * 
+   * function(ngOnInit) : Excute on Controller load
+   *  
+   */
+  ngOnInit() {
+  //this.getEvent();
+  }
   /**
    * @method ngAfterViewInit
    */
   ngAfterViewInit() {
     //Prism.highlightAll();
   }
+  /**
+   * @name - getEvent - get the event from Meetup
+   * @author - Rajat G
+   */  
+  getEvent(){
+    let obj = {
+      'url':"https://api.meetup.com/Google-Cloud-Developer-Community-Indore/events?desc=true&photo-host=public&page=1&status=past&key=29f5617a573f394d6d2f156a4643d",
+      "postData":""
+    }
+    this.commonService.postMethod(obj).subscribe(
+      data => {
+          this.response = data;
+          if(this.response.status == '1')
+          {
+           
+          }
+          else 
+          {
+            
+          }   
+      });
+  }  
 }

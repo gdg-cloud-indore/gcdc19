@@ -29,8 +29,8 @@ export class CommanService {
   	{
   		let a: any = {};
 	    let headers = new HttpHeaders();
-	    
-		return this.http.post(this.configuration.BASE_URL+url+'?version='+this.version+'&lang=English', JSON.stringify(postData),{
+	    console.log(url,postData);
+		return this.http.post(url+'?version='+this.version+'&lang=English', JSON.stringify(postData),{
 	        headers:headers
 	    }).pipe(
 			map(this.extractData),

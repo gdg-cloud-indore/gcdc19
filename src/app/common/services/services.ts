@@ -6,8 +6,10 @@ import 'rxjs/add/operator/map';
 import  { Configuration } from '../constants/constants';
 import { LOCAL_STORAGE } from '@ng-toolkit/universal';
 
+import { data_json } from '../../../json/team.json';
 @Injectable()
 export class CommanService {
+		jsonArr:any = data_json;
 	OptionData:object = {};
 	AlertOption:object = {};
 	presenttoast:any;
@@ -60,6 +62,10 @@ export class CommanService {
         });
     }
     
+    async getJson(){
+   
+        return jsonArr;
+    }
   	sendToken(token: string) { this.localStorage.setItem("LoggedInUser", token)}
   	clearToken() { this.localStorage.removeItem("LoggedInUser")}
 	getToken(){return this.localStorage.getItem("LoggedInUser")}

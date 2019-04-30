@@ -1,4 +1,4 @@
-<!--================ Innovation section Start =================-->
+================ Innovation section Start =================-->
 <!-- <section class="section-padding--small bg-gray">
     <div class="container">
       <div class="row">
@@ -787,58 +787,19 @@
                             </div>
 
                             <div class="owl-theme owl-carousel blogCarousel pb-xl-1">
-                                <div class="card-blog">
-                                    <img class="card-img" src="img/blog/blog1.png" alt="">
+                                <div class="card-blog" *ngFor="let item of neweventList">
+                                    <!-- <img class="card-img" src="img/blog/blog1.png" alt=""> -->
                                     <div class="blog-body">
-                                        <a href="#">
-                                            <h3>Owls should be used to help abused children open <br class="d-none d-xl-block"> up in therapy sessions, says charity boss</h3>
+                                        <a href="{{item.link}}">
+                                            <h3>{{item.name}}</h3>
                                         </a>
                                         <ul class="blog-info">
                                             <li><a href="#"><i class="ti-comments-smiley"></i> 03 Feb, 2019</a></li>
-                                            <li><a href="#"><i class="ti-time"></i> No Comment</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="card-blog">
-                                    <img class="card-img" src="img/blog/blog2.png" alt="">
-                                    <div class="blog-body">
-                                        <a href="#">
-                                            <h3>Owls should be used to help abused children open <br class="d-none d-xl-block"> up in therapy sessions, says charity boss</h3>
-                                        </a>
-                                        <ul class="blog-info">
-                                            <li><a href="#"><i class="ti-comments-smiley"></i> 03 Feb, 2019</a></li>
-                                            <li><a href="#"><i class="ti-time"></i> No Comment</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="card-blog">
-                                    <img class="card-img" src="img/blog/blog1.png" alt="">
-                                    <div class="blog-body">
-                                        <a href="#">
-                                            <h3>Owls should be used to help abused children open <br class="d-none d-xl-block"> up in therapy sessions, says charity boss</h3>
-                                        </a>
-                                        <ul class="blog-info">
-                                            <li><a href="#"><i class="ti-comments-smiley"></i> 03 Feb, 2019</a></li>
-                                            <li><a href="#"><i class="ti-time"></i> No Comment</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="card-blog">
-                                    <img class="card-img" src="img/blog/blog2.png" alt="">
-                                    <div class="blog-body">
-                                        <a href="#">
-                                            <h3>Owls should be used to help abused children open <br class="d-none d-xl-block"> up in therapy sessions, says charity boss</h3>
-                                        </a>
-                                        <ul class="blog-info">
-                                            <li><a href="#"><i class="ti-comments-smiley"></i> 03 Feb, 2019</a></li>
-                                            <li><a href="#"><i class="ti-time"></i> No Comment</a></li>
+                                            <!-- <li><a href="#"><i class="ti-time"></i> No Comment</a></li> -->
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <!--================ Blog section End =================-->
+                    <!--================ Blog section End =================

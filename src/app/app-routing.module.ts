@@ -7,12 +7,12 @@ import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './common/services/authguard';
 import { CommanService } from './common/services/services';
 const routes: Routes = [
-  {
+  /*{
   path: 'dashboard',
   canActivate: [AuthGuard],
   data: {title: 'Get Started'},
-  children: [{ path: '',component: HomeComponent},]},
-  {path: '',component: HomeComponent, pathMatch: 'full'},
+  children: [{ path: '',component: HomeComponent},]},*/
+  {path: '',loadChildren: './home/home.module#HomeModule'},
   //{path: 'register',loadChildren: './register/register.module#RegisterModule',data: {customLayout: true} ,pathMatch: 'full'},
   { path: "**",  redirectTo: "/", pathMatch: 'full'  }
 ];

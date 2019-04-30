@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/gdg",
+            "outputPath": "dist/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,19 +24,18 @@
               "src/img"
             ],
             "styles": [
-              "src/styles.css",
+              "src/styles.css"
             ],
             "scripts": [
-               // "../node_modules/jquery/dist/jquery.js",
               "src/assets/vendors/jquery/jquery-3.2.1.min.js",
               "src/assets/vendors/bootstrap/bootstrap.bundle.min.js",
-              /*"src/assets/vendors/owl-carousel/owl.carousel.min.js",
-              "src/assets/vendors/Magnific-Popup/jquery.magnific-popup.min.js",
-              "src/assets/js/jquery.ajaxchimp.min.js",
-              "src/assets/js/mail-script.js",
-              "src/assets/js/countdown.js",
-              "src/assets/js/jquery.magnific-popup.min.js",*/
-              "src/assets/js/main.js",
+              // "src/assets/vendors/owl-carousel/owl.carousel.min.js",
+              // "src/assets/vendors/Magnific-Popup/jquery.magnific-popup.min.js",
+              // "src/assets/js/jquery.ajaxchimp.min.js",
+              // "src/assets/js/mail-script.js",
+              // "src/assets/js/countdown.js",
+              // "src/assets/js/jquery.magnific-popup.min.js",
+              "src/assets/js/main.js"
             ],
             "es5BrowserSupport": true
           },
@@ -111,6 +110,24 @@
             "exclude": [
               "**/node_modules/**"
             ]
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/server",
+            "main": "src/main.server.ts",
+            "tsConfig": "src/tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
+            }
           }
         }
       }

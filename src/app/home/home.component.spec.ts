@@ -1,7 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
-import { BoxModule } from 'angular-admin-lte';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -9,7 +8,6 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [BoxModule],
       declarations: [HomeComponent]
     })
     .compileComponents();

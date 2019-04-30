@@ -43,25 +43,29 @@
         </nav>
     </div>
 </header>
+<!--================Header Menu Area =================-->
+  <!--================Header Menu Area =================-->
 
   <!--================Hero Banner Area Start =================-->
-   <slideshow [height]=""
-           [minHeight]="'525px'"
+   <!-- [height]=""
+           [minHeight]="'525px'" -->
+   <slideshow 
+          [minHeight]="'900px'"
            [autoPlay]="true"
            [showArrows]="true"
            [showDots]="true"
            [disableSwiping]="true"
-           [fullscreen]="true"
+           [fullscreen]="false"
            [imageUrls]="images"
            [lazyLoad]="images?.length > 1"
            [autoPlayWaitForLazyLoad]="true">
            <section class="hero-banner" >
-        <div class="container text-center">
-          <span class="hero-banner-icon"><i class="flaticon-sing"></i></span>
-          <p>Google Cloud Developer Community, Indore</p>
-        <h1>Cloud Extented 2019</h1>
-          <a class="button button-header" href="#">Buy Ticket</a>
-        </div>
-      </section>
+             <div class="container text-center">
+              <span class="hero-banner-icon"><i class="flaticon-sing"></i></span>
+              <p>Google Cloud Developer Community, Indore</p>
+              <h1>Cloud Extented 2019</h1>
+              <a class="button button-header" _target="blank" href="https://www.meetup.com/Google-Cloud-Developer-Community-Indore/">View Detail</a>
+            </div>
+          </section>
 </slideshow>
   <!--================Hero Banner Area End =================-->

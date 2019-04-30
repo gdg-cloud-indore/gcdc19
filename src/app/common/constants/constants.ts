@@ -6,5 +6,5 @@ export class Configuration {
 	public logo          = 'assets/images/logo.png';
 	public duration      = 5000;
 	public Alertduration = 1500;
-	public BASE_URL      = 'http://apidev.digipace.net/';
+	public BASE_URL      = '';
 }

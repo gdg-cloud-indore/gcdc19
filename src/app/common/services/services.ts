@@ -73,8 +73,13 @@ export class CommanService {
   	async postMethod(url, postData)
   	{
   		let a: any = {};
-	    let headers = new HttpHeaders({});
-	      return  await this.http.post(this.configuration.BASE_URL+url+'?version='+this.version+'&lang=English', postData,{
+	    /*let headers = new HttpHeaders({
+	    	'Access-Control-Allow-Origin': '*',
+	    });*/
+
+	    const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Authorization','key=29f5617a573f394d6d2f156a4643d')
+		
+	      return  await this.http.post(url, postData,{
 	        headers:headers
 	    })
 	    .toPromise()
@@ -96,6 +101,15 @@ export class CommanService {
 	       console.log('Something went worngs.');
 	    });*/
   	}
+
+  	async getMethod(url){
+  		const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Access-Control-Allow-Origin', '*')
+		
+        return  await this.http.get('http://cors.io/?'+url,{headers}).subscribe(async (res)=>{
+            console.log(res);
+            return  await JSON.parse(JSON.stringify(res));
+        });
+    }
 
   	sendToken(token: string) { localStorage.setItem("LoggedInUser", token)}
   	clearToken() { localStorage.removeItem("LoggedInUser")}

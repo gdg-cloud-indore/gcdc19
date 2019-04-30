@@ -13,13 +13,15 @@ import { CommanService } from './common/services/services';
 import { Configuration } from './common/constants/constants';
 import { HeaderSectionComponent } from './header-section/header-section.component';
 import { FooterSectionComponent } from './footer-section/footer-section.component';
+import { SlideshowModule } from 'ng-simple-slideshow';
 
 @NgModule({
   imports: [
     BrowserModule,
     AppRoutingModule,
     LoadingPageModule,
-    MaterialBarModule
+    MaterialBarModule,
+    SlideshowModule
   ],
   declarations: [
     AppComponent,

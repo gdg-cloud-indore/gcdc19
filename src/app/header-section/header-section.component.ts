@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header-section.component.css']
 })
 export class HeaderSectionComponent implements OnInit {
-
-  constructor() { }
+	images:any;
+	constructor() { }
 
   ngOnInit() {
+  	this.images = ['../img/banner/hero-banner.png','../img/banner/hero-banner.png','../img/banner/hero-banner.png','../img/banner/hero-banner.png','../img/banner/hero-banner.png'];
   }
 
 }

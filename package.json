@@ -7,7 +7,15 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+     "compile:server": "webpack --config webpack.server.config.js --progress --colors",
+    "serve:ssr": "node local.js",
+    "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
+    "build:client-and-server-bundles": "ng build --prod && ng run gdg:server:production",
+    "server": "node local.js",
+    "build:prod": "npm run build:ssr",
+    "serve:prerender": "node static.js",
+    "build:prerender": "npm run build:prod && node dist/prerender.js"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +29,7 @@
     "@angular/router": "~7.2.0",
     "angular-loading-page": "^0.6.0",
     "core-js": "^2.5.4",
+    "ng-simple-slideshow": "^1.2.9",
     "rxjs": "^6.3.3",
     "rxjs-compat": "^6.4.0",
     "tslib": "^1.9.0",

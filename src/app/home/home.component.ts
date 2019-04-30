@@ -18,7 +18,7 @@ export class HomeComponent implements AfterViewInit {
    *  
    */
   ngOnInit() {
-  //this.getEvent();
+   this.getEvent();
   }
   /**
    * @method ngAfterViewInit
@@ -30,22 +30,13 @@ export class HomeComponent implements AfterViewInit {
    * @name - getEvent - get the event from Meetup
    * @author - Rajat G
    */  
-  getEvent(){
-    let obj = {
-      'url':"https://api.meetup.com/Google-Cloud-Developer-Community-Indore/events?desc=true&photo-host=public&page=1&status=past&key=29f5617a573f394d6d2f156a4643d",
-      "postData":""
-    }
-    this.commonService.postMethod(obj).subscribe(
-      data => {
-          this.response = data;
-          if(this.response.status == '1')
-          {
-           
-          }
-          else 
-          {
-            
-          }   
-      });
-  }  
+  getEvent()
+  {
+    let obj = {};
+  	var urls = 'https://api.meetup.com/Google-Cloud-Developer-Community-Indore/events?desc=true&photo-host=public&page=1&status=past&key=29f5617a573f394d6d2f156a4643d';
+  	this.commonService.getMethod(urls)
+        .then(data => {
+          console.log(data)
+    },error =>console.log(error))
+  }
 }

@@ -23,7 +23,6 @@ export class HomeComponent implements AfterViewInit {
   }
   ngOnInit() {
    this.getEvent();
-   
   }
   ngAfterViewInit() {
     this.getEventJson();

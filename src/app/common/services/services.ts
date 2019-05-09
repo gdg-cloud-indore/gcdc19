@@ -50,7 +50,14 @@ export class CommanService {
 	       console.log('Something went worngs.');
 	    });*/
   	}
-
+		async getMethods(url){
+      const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Access-Control-Allow-Origin', '*')
+    
+        return  await this.http.get(url,{headers}).subscribe(async (res)=>{
+            console.log(res);
+            return  await JSON.parse(JSON.stringify(res));
+        });
+    }
   	async getMethod(url){
       const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Access-Control-Allow-Origin', '*')
     

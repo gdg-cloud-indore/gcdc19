@@ -1,213 +1,54 @@
 <section class="speaker-bg section-padding">
-    <div class="container">
-        <div class="section-intro section-intro-white text-center pb-98px">
-            <p class="section-intro__title">Join the event</p>
-            <h2 class="primary-text">Our Team</h2>
-            <img src="img/home/section-style.png" alt="">
-        </div>
-
-        <div class="row" *ngIf="newTeamLists">
-             <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0"  *ngFor="let item of newTeamLists">
-                <div class="card-speaker">
-                    <img class="card-img rounded-0" src="img/home/{{item.profileImage}}" alt="{{item.profileImage}}">
-                    <div class="speaker-footer">
-                        <h4>{{item.name}}</h4>
-                        <p>{{item.designation}}</p>
-                    </div>
-                    <div class="speaker-overlay">
-                        <ul class="speaker-social">
-                            <li><a href="{{item.facebook}}"><i class="ti-facebook"></i></a></li>
-                            <li><a href="{{item.twitter}}"><i class="ti-twitter-alt"></i></a></li>
-                            <li><a href="{{item.linkedin}}"><i class="ti-instagram"></i></a></li>
-                            <li><a href="{{item.github}}"><i class="ti-skype"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-           
-
-        </div>
+  <div class="container">
+    <div class="section-intro section-intro-white text-center pb-98px">
+      <!-- <p class="section-intro__title">Join the event</p> -->
+      <h2 class="primary-text">Our Team</h2>
+      <img src="img/home/section-style.png" alt="">
     </div>
+
+    <div class="row" *ngIf="newTeamLists">
+      <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0" *ngFor="let item of newTeamLists">
+        <div class="card-speaker">
+          <img class="card-img rounded-0" src="img/home/{{item.profileImage}}" alt="{{item.profileImage}}">
+          <div class="speaker-footer">
+            <h4>{{item.name}}</h4>
+            <p>{{item.designation}}</p>
+          </div>
+          <div class="speaker-overlay">
+            <ul class="speaker-social">
+              <li><a href="{{item.facebook}}"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="{{item.twitter}}"><i class="ti-twitter-alt"></i></a></li>
+              <li><a href="{{item.linkedin}}"><i class="ti-instagram"></i></a></li>
+              <li><a href="{{item.github}}"><i class="ti-skype"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-                    <section class="section-padding--small sponsor-bg">
-                        <div class="container">
-                            <div class="section-intro text-center pb-80px">
-                                <p class="section-intro__title">Join the event</p>
-                                <h2 class="primary-text">Event Plan Sponsors</h2>
-                                <img src="img/home/section-style.png" alt="">
-                            </div>
+<!--================ Blog section Start =================-->
+<section class="section-margin">
+  <div class="container">
+    <div class="section-intro text-center pb-98px">
+      <!-- <p class="section-intro__title">Join the event</p> -->
+      <h2 class="primary-text">Previous Events</h2>
+      <img src="img/home/section-style.png" alt="">
+    </div>
 
-                            <div class="sponsor-wrapper mb-5 pb-4">
-                                <h3 class="sponsor-title mb-5">Partners</h3>
-                                <div class="row">
-                                    <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
-                                        <div class="sponsor-single">
-                                            <img class="img-fluid" src="img/home/gdg.png" alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
-                                        <div class="sponsor-single">
-                                            <img class="img-fluid" src="img/home/gdgcindore.jpeg" alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
-                                        <div class="sponsor-single">
-                                            <img class="img-fluid" src="img/home/sponsor3.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="sponsor-wrapper sponsor-wrapper--small">
-                                <h3 class="sponsor-title mb-5">Silver Sponsor</h3>
-                                <div class="row">
-                                    <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
-                                        <div class="sponsor-single">
-                                            <img class="img-fluid" src="img/home/sponsor-sm-1.png" alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
-                                        <div class="sponsor-single">
-                                            <img class="img-fluid" src="img/home/sponsor-sm-2.png" alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
-                                        <div class="sponsor-single">
-                                            <img class="img-fluid" src="img/home/sponsor-sm-3.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!--================ Sponsor section End =================-->
-
-                    <!--================ Gallery section Start =================-->
-                    <section class="section-padding gallery-area gallery-bg">
-                        <div class="container">
-                            <div class="section-intro section-intro-white text-center pb-98px">
-                                <p class="section-intro__title">Join the event</p>
-                                <h2 class="primary-text">Event Plan Sponsors</h2>
-                                <img src="img/home/section-style.png" alt="">
-                            </div>
-
-                            <div class="row no-gutters">
-                                <div class="col-sm-6 col-md-4">
-                                    <a href="img/gallery/g1.png" class="img-gal">
-                                        <div class="single-imgs relative">
-                                            <img class="card-img rounded-0" src="img/gallery/g1.png" alt="">
-                                            <div class="overlay">
-                                                <div class="overlay-content">
-                                                    <div class="overlay-icon">
-                                                        <i class="ti-plus"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-sm-6 col-md-4">
-                                    <a href="img/gallery/g2.png" class="img-gal">
-                                        <div class="single-imgs relative">
-                                            <img class="card-img rounded-0" src="img/gallery/g2.png" alt="">
-                                            <div class="overlay">
-                                                <div class="overlay-content">
-                                                    <div class="overlay-icon">
-                                                        <i class="ti-plus"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-sm-6 col-md-4">
-                                    <a href="img/gallery/g3.png" class="img-gal">
-                                        <div class="single-imgs relative">
-                                            <img class="card-img rounded-0" src="img/gallery/g3.png" alt="">
-                                            <div class="overlay">
-                                                <div class="overlay-content">
-                                                    <div class="overlay-icon">
-                                                        <i class="ti-plus"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-sm-6 col-md-4">
-                                    <a href="img/gallery/g4.png" class="img-gal">
-                                        <div class="single-imgs relative">
-                                            <img class="card-img rounded-0" src="img/gallery/g4.png" alt="">
-                                            <div class="overlay">
-                                                <div class="overlay-content">
-                                                    <div class="overlay-icon">
-                                                        <i class="ti-plus"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-sm-6 col-md-4">
-                                    <a href="img/gallery/g5.png" class="img-gal">
-                                        <div class="single-imgs relative">
-                                            <img class="card-img rounded-0" src="img/gallery/g5.png" alt="">
-                                            <div class="overlay">
-                                                <div class="overlay-content">
-                                                    <div class="overlay-icon">
-                                                        <i class="ti-plus"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-sm-6 col-md-4">
-                                    <a href="img/gallery/g6.png" class="img-gal">
-                                        <div class="single-imgs relative">
-                                            <img class="card-img rounded-0" src="img/gallery/g6.png" alt="">
-                                            <div class="overlay">
-                                                <div class="overlay-content">
-                                                    <div class="overlay-icon">
-                                                        <i class="ti-plus"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!--================ Gallery section End =================-->
-
-
-                    <!--================ Blog section Start =================-->
-                    <section class="section-margin">
-                        <div class="container">
-                            <div class="section-intro text-center pb-98px">
-                                <p class="section-intro__title">Join the event</p>
-                                <h2 class="primary-text">Why Join Ummet</h2>
-                                <img src="img/home/section-style.png" alt="">
-                            </div>
-
-                            <div class="owl-theme owl-carousel blogCarousel pb-xl-1">
-                                <div class="card-blog" *ngFor="let item of neweventList">
-                                    <!-- <img class="card-img" src="img/blog/blog1.png" alt=""> -->
-                                    <div class="blog-body">
-                                        <a href="{{item.link}}">
-                                            <h3>{{item.name}}</h3>
-                                        </a>
-                                        <ul class="blog-info">
-                                            <li><a href="#"><i class="ti-comments-smiley"></i> 03 Feb, 2019</a></li>
-                                            <!-- <li><a href="#"><i class="ti-time"></i> No Comment</a></li> -->
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+    <div class="owl-theme owl-carousel blogCarousel pb-xl-1">
+      <div class="card-blog" *ngFor="let item of neweventList">
+        <!-- <img class="card-img" src="img/blog/blog1.png" alt=""> -->
+        <div class="blog-body">
+          <a href="{{item.link}}">
+            <h3>{{item.name}}</h3>
+          </a>
+          <ul class="blog-info">
+            <li><a href="#"><i class="ti-comments-smiley"></i> 03 Feb, 2019</a></li>
+            <!-- <li><a href="#"><i class="ti-time"></i> No Comment</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

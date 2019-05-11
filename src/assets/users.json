@@ -40,17 +40,17 @@
     "designation": "Organizer",
     "twitter": "https://twitter.com/rajat71194",
     "linkedin": "https://www.linkedin.com/in/rajat-gupta-a22b5769",
-    "github": "",
+    "github": "https://github.com/rajat71194",
     "facebook": "https://www.facebook.com/rajat.gupta.165",
     "profileImage": "rajat.jpg"
   },
   {
     "name": "Akash Gangrade",
     "designation": "Organizer",
-    "twitter": "https://twitter.com/rajat71194",
+    "twitter": "https://twitter.com/akashgangrade23",
     "linkedin": "https://www.linkedin.com/in/rajat-gupta-a22b5769",
-    "github": "",
-    "facebook": "https://www.facebook.com/rajat.gupta.165",
+    "github": "https://github.com/akashgangrade",
+    "facebook": "https://www.facebook.com/akash.gangrade.1",
     "profileImage": "akashG.jpg"
   },
   {
@@ -81,6 +81,15 @@
     "facebook": "https://www.facebook.com/shachita.jain",
     "profileImage": "shachita.jpg"
   },
+   {
+    "name": "Yashvant Malviya",
+    "designation": "Developer",
+    "twitter": "",
+    "linkedin": "https://www.linkedin.com/in/yashvant-malviya-a0b268123",
+    "github": "",
+    "facebook": "https://www.facebook.com/yashvant.malviya",
+    "profileImage": "yashvant.jpg"
+  },
   {
     "name": "Bhanu Kushwah",
     "designation": "Designer",
@@ -89,5 +98,14 @@
     "github": "",
     "facebook": "https://www.facebook.com/people/Bhanu-Kushwah/100007943176574",
     "profileImage": "bhanu.jpg"
+  },
+  {
+    "name": "Aditi Sharma",
+    "designation": "Organizer",
+    "twitter": "",
+    "linkedin": "https://www.linkedin.com/in/aditi-sharma-823937121",
+    "github": "",
+    "facebook": "https://www.facebook.com/profile.php?id=100002393659761",
+    "profileImage": "aditiSharma.jpg"
   }
 ]

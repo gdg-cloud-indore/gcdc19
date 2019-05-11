@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './home/home.component';
+// import { HomeComponent } from './home/home.component';
 
 /* Serivce */
 import { AuthGuard } from './common/services/authguard';

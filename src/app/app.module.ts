@@ -16,7 +16,7 @@ import { CommonModule } from '@angular/common';
 import { TransferHttpCacheModule } from '@nguniversal/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgtUniversalModule } from '@ng-toolkit/universal';
-import { SlideshowModule } from 'ng-simple-slideshow';
+// import { SlideshowModule } from 'ng-simple-slideshow';
 
 @NgModule({
   imports: [
@@ -28,7 +28,7 @@ import { SlideshowModule } from 'ng-simple-slideshow';
     TransferHttpCacheModule,
     HttpClientModule,
     NgtUniversalModule,
-    SlideshowModule
+    // SlideshowModule
   ],
   declarations: [
     AppComponent,

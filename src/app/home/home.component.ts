@@ -17,48 +17,31 @@ export class HomeComponent implements AfterViewInit {
    * @method ngAfterViewInit
    */
   neweventList:any;
+  images:any;
   newTeamLists:any;
   constructor(private commonService: CommanService,public http: HttpClient,) { 
     
   }
+
   ngOnInit() {
+    this.images = ['../img/banner/hero.jpg','../img/banner/hero-banner.png'];
+  
    this.getEvent();
   }
   ngAfterViewInit() {
-    this.getEventJson();
-  }
-  getTeam(){
- this.commonService.getJson()
-        .then(data => {
-        console.log(data);
-        });
-  }
-  getEvent()
-  {
-    // this.neweventList = [{"created":1551684293000,"duration":14400000,"id":"259465282","name":"GCDC: Cloud Study Jam '19","rsvp_limit":300,"date_in_series_pattern":false,"status":"past","time":1552192200000,"local_date":"2019-03-10","local_time":"10:00","updated":1552205433000,"utc_offset":19800000,"waitlist_count":0,"yes_rsvp_count":32,"venue":{"id":26191331,"name":"Techcoopers Software Solutions","lat":22.722747802734375,"lon":75.88687133789062,"repinned":true,"address_1":"Shekhar central","city":"Indore","country":"in","localized_country_name":"India"},"group":{"created":1532694839000,"name":"Google Cloud Developer Community, Indore","id":29367618,"join_mode":"open","lat":22.719999313354492,"lon":75.86000061035156,"urlname":"Google-Cloud-Developer-Community-Indore","who":"Members","localized_location":"Indore, India","state":"","country":"in","region":"en_US","timezone":"Asia/Calcutta"},"link":"https://www.meetup.com/Google-Cloud-Developer-Community-Indore/events/259465282/","description":"<p>Announcing Cloud Study Jam \u201919</p> <p>New to the Cloud but don't know where to start? Join us for a Cloud Study Jams.</p> <p>Get official Google training, a $55+ value, free of charge. You will get hands-on experience with several machine learning tools from Google and with the Cloud Console.</p> <p>You will have free access to more labs you can finish at home. Complete all labs in the quest and earn a Google-hosted badge for your online profile, and additional 30 days access to the training platform to compete in any labs you want.</p> <p>Topic: Kubernetes<br/>Date: 10th Mar\u201919<br/>Venue: Techcoopers Software Solutions<br/>Address: Shekhar central, 214, 5-4, Manorama Ganj, Indore, Madhya Pradesh 452001<br/>Agenda :<br/>10 : 00 am - Managing Deployments Using Kubernetes Engine<br/>11 : 00 am - Awwvision: Cloud Vision API from a Kubernetes Cluster<br/>12 : 00 am - Break<br/>12 : 10 am - Kubeflow End to End<br/>01 : 00 pm - Deploy a Web App on GKE with HTTPS Redirect using Lets Encrypt<br/>02 : 00 pm - Event ends - THANK YOU!</p> <p>Please Register: <a href=\"https://goo.gl/forms/rMA8Ie4ixB5Hpenq1\" class=\"linkified\">https://goo.gl/forms/rMA8Ie4ixB5Hpenq1</a></p> <p>Bring a laptop (fully charged, will have limited power sockets). We will provide Wi-Fi. The labs will run on all of the latest versions of the popular browsers. For the best experience, make sure your laptop has Firefox or Chrome installed</p> ","how_to_find_us":"Shekhar central, 214, 5-4, Manorama Ganj, Indore, Madhya Pradesh 452001","visibility":"public","pro_is_email_shared":false}];
-    let obj = {};
-  	var urls = 'https://api.meetup.com/Google-Cloud-Developer-Community-Indore/events?desc=true&photo-host=public&page=8&status=past&key=29f5617a573f394d6d2f156a4643d';
-  	this.commonService.getMethod(urls)
-        .then(data => {
-          var neweventList = data;
-          console.log('ddddd',neweventList);
-         if(!_.isEmpty(neweventList))
-         {
-            this.neweventList = neweventList;
-         }
-    },error =>console.log(error))
   }
 
-  getEventJson()
+  getEvent()
   {
-    var urls = './assets/users.json';
-    //var urls = 'https://raw.githubusercontent.com/gdg-iwd/iwd-indore/master/src/assets/data/team.json';
+    //this.neweventList = [{"created":1556125446000,"duration":21600000,"id":"260885724","name":"Cloud Next Extended 2019","rsvp_limit":300,"date_in_series_pattern":false,"status":"upcoming","time":1557635400000,"local_date":"2019-05-12","local_time":"10:00","updated":1557378329000,"utc_offset":19800000,"waitlist_count":0,"yes_rsvp_count":155,"venue":{"id":26217609,"name":"WittyFeed","lat":22.722963333129883,"lon":75.8870849609375,"repinned":true,"city":"Indore","country":"in","localized_country_name":"India"},"group":{"created":1532694839000,"name":"Google Cloud Developer Community, Indore","id":29367618,"join_mode":"open","lat":22.719999313354492,"lon":75.86000061035156,"urlname":"Google-Cloud-Developer-Community-Indore","who":"Members","localized_location":"Indore, India","state":"","country":"in","region":"en_US","timezone":"Asia/Calcutta"},"link":"https://www.meetup.com/Google-Cloud-Developer-Community-Indore/events/260885724/","description":"<p>This time Google Cloud Developers Community, Indore presents you the most exciting event for May 2019: Cloudnext Extended 2019!</p> <p>Most awaited event of the year - where we will be reviewing various intriguing cloud technologies introduced at the Google Cloudnext event held at San Francisco.</p> <p>So get ready to witness some of our expert speakers who will be conducting a variety of sessions on different areas of cloud-related technologies .</p> <p>Details:</p> <p>Date: 12 May 2019<br/>Venue: Wittyfeed Headquarters, Shekhar Central, Palasia, Indore<br/>Time: 10 AM to 4 PM</p> <p>Registration: 9-10<br/>Welcome Note: 10:15-10:30<br/>Speaker Sessions Phase 1 :<br/>Dharmesh Vaya-&gt; Google Anthos: 10:30-11:30<br/>Rajat Jaiswal-&gt; Business Automation using Microsoft Flow: 11:30-12:30<br/>Lunch : 12:30-1:00<br/>Speaker Sessions Phase 2:<br/>Tushar Pal -&gt; Google Cloud Run: 1:00-2:00<br/>Akash Agrawal -&gt; Kubernetes and ML: 2:00-3:00<br/>Panel discussion: 3:00-3:30<br/>Closing Note<br/>Networking</p> <p>Register here: <a href=\"https://www.eventbrite.com/e/cloud-next-extended-19-tickets-60827713328\" class=\"linkified\">https://www.eventbrite.com/e/cloud-next-extended-19-tickets-60827713328</a></p> <p>For any questions please E-Mail us at gcdcindore@gmail.com</p> ","how_to_find_us":"Shekhar Central at Palasia Square","visibility":"public","pro_is_email_shared":false}];
+  	var urls = 'http://cors.io/?https://api.meetup.com/Google-Cloud-Developer-Community-Indore/events?&sign=true&photo-host=public&page=20&key=29f5617a573f394d6d2f156a4643d';
+
         const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Access-Control-Allow-Origin', '*')
            this.http.get(urls,{headers}).subscribe((res)=>{
-            var newteamtList = JSON.parse(JSON.stringify(res));
-            if(!_.isEmpty(newteamtList))
+            var neweventList = JSON.parse(JSON.stringify(res));
+            if(!_.isEmpty(neweventList))
             {
-              this.newTeamLists = newteamtList;
+              this.neweventList = neweventList;
             }
         });
   }

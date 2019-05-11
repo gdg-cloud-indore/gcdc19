@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
+import { TeamComponent } from './team/team.component';
+import { EventsComponent } from './events/events.component';
+import { EventsdeatilsComponent } from './eventsdeatils/eventsdeatils.component';
+
 
 /* Serivce */
 import { AuthGuard } from '../common/services/authguard';
 import { CommanService } from '../common/services/services';
 const routes: Routes = [
-{
-  path: 'dashboard',
-  canActivate: [AuthGuard],
-  data: {title: 'Get Started'},
-  children: [{ path: '',component: HomeComponent},]},
   {path: '',component: HomeComponent, pathMatch: 'full'},
-  //{path: 'register',loadChildren: './register/register.module#RegisterModule',data: {customLayout: true} ,pathMatch: 'full'},
+  {path: 'team',component: TeamComponent},
+  {path: 'events',component: EventsComponent},
+  { path: 'events/:eventsId', component: EventsdeatilsComponent },
   { path: "**",  redirectTo: "/", pathMatch: 'full'  }
 ];
 

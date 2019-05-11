@@ -6,10 +6,10 @@ import 'rxjs/add/operator/map';
 import  { Configuration } from '../constants/constants';
 import { LOCAL_STORAGE } from '@ng-toolkit/universal';
 
-import { data_json } from '../../../json/team.json';
+// import { data_json } from '../../../json/team.json';
 @Injectable()
 export class CommanService {
-		jsonArr:any = data_json;
+		// jsonArr:any = data_json;
 	OptionData:object = {};
 	AlertOption:object = {};
 	presenttoast:any;
@@ -52,7 +52,14 @@ export class CommanService {
 	       console.log('Something went worngs.');
 	    });*/
   	}
-
+		async getMethods(url){
+      const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Access-Control-Allow-Origin', '*')
+    
+        return  await this.http.get(url,{headers}).subscribe(async (res)=>{
+            console.log(res);
+            return  await JSON.parse(JSON.stringify(res));
+        });
+    }
   	async getMethod(url){
       const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Access-Control-Allow-Origin', '*')
     
@@ -64,7 +71,7 @@ export class CommanService {
     
     async getJson(){
    
-        return jsonArr;
+        return {};
     }
   	sendToken(token: string) { this.localStorage.setItem("LoggedInUser", token)}
   	clearToken() { this.localStorage.removeItem("LoggedInUser")}

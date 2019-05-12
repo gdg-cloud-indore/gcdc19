@@ -26,17 +26,21 @@ export class EventsdeatilsComponent implements OnInit {
 		});
   }
 
-
+ngAfterViewInit() {
+    //this.getEvent(this.ids);
+  }
   getEvent(ids)
   {
-  	//var urls = '../assets/events.json';
-    var urls = 'http://cors.io/?https://api.meetup.com/Google-Cloud-Developer-Community-Indore/events?key=29f5617a573f394d6d2f156a4643d&id='+ids;
+  	var urls = '../assets/allevents.json';
+    //var urls = 'http://cors.io/?https://api.meetup.com/Google-Cloud-Developer-Community-Indore/events?key=29f5617a573f394d6d2f156a4643d&id='+ids;
   	const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Access-Control-Allow-Origin', '*')
            this.http.get(urls,{headers}).subscribe((res)=>{
-            var neweventList = JSON.parse(JSON.stringify(res));
+            var neweventLists = JSON.parse(JSON.stringify(res));
+           var neweventList = _.findWhere(neweventLists,{id:ids});
+    
             if(!_.isEmpty(neweventList))
             {
-              this.events = neweventList;
+              this.events = [neweventList];
             }
         });
   }

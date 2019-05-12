@@ -19,11 +19,13 @@ export class EventsComponent implements OnInit {
   	this.getEvent();
   }
 
-
+ngAfterViewInit() {
+    //this.getEvent();
+  }
   getEvent()
   {
-  	//var urls = '../assets/events.json';
-    var urls = 'http://cors.io/?https://api.meetup.com/Google-Cloud-Developer-Community-Indore/events?desc=true&photo-host=public&page=8&status=past&key=29f5617a573f394d6d2f156a4643d';
+  	var urls = '../assets/allevents.json';
+    //var urls = 'http://cors.io/?https://api.meetup.com/Google-Cloud-Developer-Community-Indore/events?desc=true&photo-host=public&page=8&status=past&key=29f5617a573f394d6d2f156a4643d';
   	const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Access-Control-Allow-Origin', '*')
            this.http.get(urls,{headers}).subscribe((res)=>{
             var neweventList = JSON.parse(JSON.stringify(res));
